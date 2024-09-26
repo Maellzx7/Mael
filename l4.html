@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array Bidimensional</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <script>//4. Crie um array 3x3 com valores recebidos via prompt contendo números e strings. Ao final exiba todos os valores recebidos e os tipos de valor específico, número ou string.</script>
+    <center>
+        <h1>Números e Strings do LepoLepo</h1>
+    </center>
+    <script>
+        //LepoLepoChalengeEasterEgg
+        let matriz = Array.from({ length: 3 }, () => Array(3).fill(''));
+
+        matriz.forEach((linha, i) => {
+            linha.forEach((_, j) => {
+                matriz[i][j] = prompt(`Digite o valor (número ou string) para matriz[${i}][${j}]:`);
+            });
+        });
+
+
+        matriz.forEach(linha => {
+            linha.forEach(valor => {
+                document.write(`Valor: ${valor}, Tipo: ${typeof valor}<br>`);
+            });
+        });
+    </script>
+     <button><a class="nav-link active" aria-current="page" href="TPA.html">Voltar para página de TPA</a></button>
+</body>
+</html>

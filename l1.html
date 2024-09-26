@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LepoLepo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>//1. Crie um array bidimensional de 3 índices com 3 itens cada. Receba os valores de cada índice via prompt e no final exiba a tabela de valores digitada e a soma de todos os números.</script>
+    <center>
+        <h1>Array Bidimensional do LepoLepo </h1>
+    </center>
+    <script>
+        let matriz = Array.from({ length: 3 }, () => Array(3).fill(0));
+
+        matriz.forEach((linha, i) => {
+            linha.forEach((_, j) => {
+                matriz[i][j] = Number(prompt(`Digite o valor para matriz[${i}][${j}]:`));
+            });
+        });
+        //LepoLepoChalengeEasterEgg
+        document.write("<table border='1'>");
+
+        matriz.forEach(linha => {
+            document.write("<tr>");
+            linha.forEach(valor => {
+                document.write(`<td>${valor}</td>`);
+            });
+            document.write("</tr>");
+        });
+
+        document.write("</table>");
+
+        const soma = matriz.flat().reduce((acc, val) => acc + val, 0);
+        document.write(`<p>Soma dos números: ${soma}</p>`);
+    </script>
+     <button><a class="nav-link active" aria-current="page" href="TPA.html">Voltar para página de TPA</a></button>
+</body>
+</html>

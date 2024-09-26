@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        input {
+            width: 80px;
+            height: 40px; 
+            text-align: center;
+            font-size: 16px; 
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Array Bidimensional 3x3 do LepoLepo</h1></center>
+    
+    <table>
+        <tr>
+            <td><input type="text" id="valor1" placeholder="Valor 1"></td>
+            <td><input type="text" id="valor2" placeholder="Valor 2"></td>
+            <td><input type="text" id="valor3" placeholder="Valor 3"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="valor4" placeholder="Valor 4"></td>
+            <td><input type="text" id="valor5" placeholder="Valor 5"></td>
+            <td><input type="text" id="valor6" placeholder="Valor 6"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="valor7" placeholder="Valor 7"></td>
+            <td><input type="text" id="valor8" placeholder="Valor 8"></td>
+            <td><input type="text" id="valor9" placeholder="Valor 9"></td>
+        </tr>
+    </table>
+    <h2>Multiplicador</h2>
+    <input type="text" id="multiplicador" placeholder="Multiplicador" style="width: 80px; height: 40px; font-size: 16px;">
+    <button id="calcular">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('calcular').onclick = function() {
+            const matriz = [
+                [document.getElementById('valor1').value, document.getElementById('valor2').value, document.getElementById('valor3').value],
+                [document.getElementById('valor4').value, document.getElementById('valor5').value, document.getElementById('valor6').value],
+                [document.getElementById('valor7').value, document.getElementById('valor8').value, document.getElementById('valor9').value]
+            ];
+
+            const multiplicador = Number(document.getElementById('multiplicador').value);
+            const concatenado = matriz.flat().map(valor => {
+                const num = Number(valor);
+                return isNaN(num) ? null : num * multiplicador; 
+            }).filter(valor => valor !== null).join(', ');
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `<h3>Valores:</h3><p>${concatenado}</p>`;
+        };
+    </script>
+     <button><a class="nav-link active" aria-current="page" href="TPA.html">Voltar para página de TPA</a></button>
+</body>
+</html>

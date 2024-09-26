@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Bidimensional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>//3. Crie um array 3x3 com valores recebidos via prompt e ao final exiba os valores digitados e o maior valor entre eles.</script>
+  <center><h1>Maior Número do LepoLepo</h1></center>
+    <script>
+       //LepoLepoChalengeEasterEgg
+        let matriz = Array.from({ length: 3 }, () => Array(3).fill(0));
+
+        matriz.forEach((linha, i) => {
+            linha.forEach((_, j) => {
+                matriz[i][j] = Number(prompt(`Digite o valor para matriz[${i}][${j}]:`));
+            });
+        });
+
+      
+        
+        matriz.forEach(linha => {
+            document.write(linha.join(' ') + '<br>');
+        });
+
+        const maiorValor = matriz.flat().reduce((max, val) => (val > max ? val : max), matriz[0][0]);
+        document.write(`<p>Maior valor: ${maiorValor}</p>`);
+    </script>
+     <button><a class="nav-link active" aria-current="page" href="TPA.html">Voltar para página de TPA</a></button>
+</body>
+</html>

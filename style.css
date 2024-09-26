@@ -1,0 +1,18 @@
+body {
+background-color: rgb(126, 140, 151);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+.nav-link.active {
+    margin-top: 50px;
+}
+p {
+    font-size: 16px;
+    color: #495057;
+    line-height: 1.6;
+    text-align: center;
+}

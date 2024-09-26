@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #0056b3;
+        }
+        .accordion-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .accordion-body img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        p {
+            font-size: 16px;
+            color: #495057;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Banco de Dados</h1>
+        <p>
+            A matéria de Banco de Dados é um campo fundamental da Ciência da Computação que trata da coleta, organização, armazenamento e gerenciamento de dados. 
+            Ela é essencial para o desenvolvimento de sistemas de informação e para a tomada de decisões baseadas em dados. A disciplina abrange conceitos como modelagem de dados, 
+            linguagens de consulta (como SQL), normalização, e técnicas de otimização de consultas. Além disso, envolve a criação e manutenção de bancos de dados relacionais 
+            e não relacionais, garantindo a integridade e segurança dos dados armazenados. O objetivo é garantir que os dados estejam disponíveis de forma eficiente e segura 
+            para suportar aplicações e processos empresariais.
+        </p>
+        
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Diagrama ER-Biblioteca
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><img src="img2/bd1.png" height="400px" alt="Diagrama ER-Biblioteca"></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Diagrama ER-Mecânica
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><img src="img2/bd2.png" height="400px" alt="Diagrama ER-Mecânica"></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Diagrama ER-Farmácia
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><img src="img2/bd3.png" height="400px" alt="Diagrama ER-Farmácia"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<button><a class="nav-link active" aria-current="page" href="index.html">Voltar para página inicial</a></button>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
